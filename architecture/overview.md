@@ -5,7 +5,7 @@
 This DNS resolver runs on a Contabo VPS hosting the ECN2026 infrastructure. It provides recursive DNS resolution for clients connected via WireGuard VPN (`10.100.0.0/24`), with full DNSSEC validation and comprehensive monitoring.
 
 ## High-Level Diagram
-![System Architecture](./images/system-architecture.png)
+![System Architecture](./system-architecture.png)
 
 ## Core Components
 
