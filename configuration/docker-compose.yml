@@ -1,0 +1,15 @@
+services:
+  unbound:
+    image: klutchell/unbound:latest
+    container_name: unbound-dns
+    ports:
+      - "10.100.0.1:53:53/udp"
+      - "10.100.0.1:53:53/tcp"
+    environment:
+      - TZ=Europe/Berlin
+    volumes:
+      - ./unbound.conf:/opt/local/unbound/unbound.conf:ro
+      - ./certs:/opt/unbound/certs:ro
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
